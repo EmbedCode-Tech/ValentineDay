@@ -1,125 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Love ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 420px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-      position: relative;
-      z-index: 2;
-    }
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
+}
 
-    h1 { color: #e63946; }
-    h2 { color: #ff4d6d; }
+h1 { color: #e63946; }
+h2 { color: #ff4d6d; }
 
-    button {
-      padding: 12px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: 0.3s;
-    }
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
 
-    .btn-primary {
-      background: #e63946;
-      color: white;
-    }
+.btn-primary {
+  background: #e63946;
+  color: white;
+}
 
-    .btn-primary:hover {
-      transform: scale(1.1);
-    }
+.btn-primary:hover {
+  transform: scale(1.1);
+}
 
-    .btn-secondary {
-      background: #adb5bd;
-      color: white;
-      position: relative;
-    }
+.btn-secondary {
+  background: #adb5bd;
+  color: white;
+  position: relative;
+}
 
-    .hidden { display: none; }
+.hidden { display: none; }
 
-    /* Letter Animation */
-    .letter {
-      width: 220px;
-      height: 140px;
-      background: #fff0f3;
-      border: 2px solid #ff4d6d;
-      border-radius: 10px;
-      margin: 20px auto;
-      cursor: pointer;
-      position: relative;
-      transition: transform 0.6s;
-    }
+/* Letter */
+.letter {
+  width: 220px;
+  height: 140px;
+  background: #fff0f3;
+  border: 2px solid #ff4d6d;
+  border-radius: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.6s;
+}
 
-    .letter:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #ff4d6d;
-      clip-path: polygon(0 0, 50% 50%, 100% 0);
-      transition: 0.6s;
-    }
+.letter:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff4d6d;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transition: 0.6s;
+}
 
-    .letter.open:before {
-      transform: rotateX(180deg);
-      transform-origin: top;
-    }
+.letter.open:before {
+  transform: rotateX(180deg);
+  transform-origin: top;
+}
 
-    .letter-content {
-      display: none;
-      margin-top: 15px;
-      font-size: 14px;
-      animation: fadeIn 1s ease-in-out;
-    }
+.letter-content {
+  display: none;
+  margin-top: 15px;
+  animation: fadeIn 1.5s ease-in-out;
+}
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+.romantic-text {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.romantic-text strong {
+  color: #e63946;
+}
 
-    /* Floating hearts */
-    .heart {
-      position: absolute;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 20px;
-      animation: float 6s linear infinite;
-    }
+.romantic-text p {
+  margin-bottom: 15px;
+}
 
-    @keyframes float {
-      from { transform: translateY(100vh); opacity: 1; }
-      to { transform: translateY(-10vh); opacity: 0; }
-    }
-  </style>
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Hearts */
+.heart {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
 </head>
 
 <body>
@@ -148,12 +162,29 @@
     <div class="letter" id="letter" onclick="openLetter()"></div>
 
     <div class="letter-content" id="letterContent">
-      <p>Dear Love ❤️</p>
-      <p>
-        You are my sunshine, my happiness, and my forever.
-        Every heartbeat whispers your name.
-      </p>
-      <p>Forever Yours 💕</p>
+      <div class="romantic-text">
+        <p><strong>Hi Love,</strong></p>
+
+        <p>
+          I remember the beautiful moments I spent with you —
+          our first Valentine’s Day that we celebrated at
+          <strong>Rankala Lake, Kolhapur</strong>.
+          We have such beautiful memories together.
+        </p>
+
+        <p>
+          I know we have to face some challenges, but I am ready to take those challenges.
+          With love, I am making you mine.
+          Just stay by my side — the future we see is ours,
+          and that day is close when I will make food for you
+          and do everything to make you stress-free.
+        </p>
+
+        <p>
+          We love, we fight, but we stay together.
+          I believe in our love, and I know we can do this. ❤️
+        </p>
+      </div>
 
       <img src="memory.jpg" alt="Our Memory">
     </div>
@@ -167,54 +198,50 @@
 </div>
 
 <script>
-  let noCount = 0;
+let noCount = 0;
 
-  function startLove() {
-    document.getElementById('bgMusic').play();
-    document.getElementById('step1').classList.add('hidden');
-    document.getElementById('step2').classList.remove('hidden');
-  }
+function startLove() {
+  document.getElementById('bgMusic').play();
+  document.getElementById('step1').classList.add('hidden');
+  document.getElementById('step2').classList.remove('hidden');
+}
 
-  function yesClicked() {
-    document.getElementById('step2').classList.add('hidden');
-    document.getElementById('step3').classList.remove('hidden');
-  }
+function yesClicked() {
+  document.getElementById('step2').classList.add('hidden');
+  document.getElementById('step3').classList.remove('hidden');
+}
 
-  function noClicked() {
-    const noBtn = document.getElementById('noBtn');
-    noCount++;
+function noClicked() {
+  const noBtn = document.getElementById('noBtn');
+  noCount++;
+  const messages = [
+    'Are you sure? 😜',
+    'Think again 😏',
+    'Please don’t 😭',
+    'You can’t escape 😆'
+  ];
+  noBtn.innerText = messages[noCount % messages.length];
+  noBtn.style.left = Math.random() * 150 - 75 + 'px';
+}
 
-    const messages = [
-      'Are you sure? 😜',
-      'Think again 😏',
-      'Please don’t 😭',
-      'You can’t escape 😆'
-    ];
+function openLetter() {
+  document.getElementById('letter').classList.add('open');
+  document.getElementById('letterContent').style.display = 'block';
+}
 
-    noBtn.innerText = messages[noCount % messages.length];
-    noBtn.style.position = "relative";
-    noBtn.style.left = Math.random() * 150 - 75 + 'px';
-  }
+/* Floating hearts generator */
+setInterval(() => {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerText = '❤️';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+  document.body.appendChild(heart);
 
-  function openLetter() {
-    const letter = document.getElementById('letter');
-    letter.classList.add('open');
-    document.getElementById('letterContent').style.display = 'block';
-  }
-
-  // Floating hearts generator
-  setInterval(() => {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerText = '❤️';
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 6000);
-  }, 500);
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 500);
 </script>
 
 </body>
